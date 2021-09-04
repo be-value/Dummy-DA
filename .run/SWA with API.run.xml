@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SWA with API" type="CompoundRunConfigurationType">
+    <toRun name="Api" type="AzureFunctionsHost" />
+    <toRun name="Client" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>
