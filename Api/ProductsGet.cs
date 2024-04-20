@@ -1,30 +1,17 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace Api
 {
-    public class ProductsGet
+    public class ProductsGet(IProductData productData, ILogger<ProductsGet> logger)
     {
-        private readonly IProductData productData;
-
-        public ProductsGet(IProductData productData)
-        {
-            this.productData = productData;
-        }
-
-        [FunctionName("ProductsGet")]
+        [Function("ProductsGet")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req, ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            logger.LogInformation("C# HTTP trigger function processed a request.");
 
             var products = await productData.GetProducts();
             return new OkObjectResult(products);

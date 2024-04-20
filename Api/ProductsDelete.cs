@@ -1,26 +1,16 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 
 namespace Api
 {
-    public class ProductsDelete
+    public class ProductsDelete(IProductData productData, ILogger<ProductsDelete> logger)
     {
-        private readonly IProductData productData;
-
-        public ProductsDelete(IProductData productData)
-        {
-            this.productData = productData;
-        }
-
-        [FunctionName("ProductsDelete")]
+        [Function("ProductsDelete")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "products/{productId:int}")] HttpRequest req,
-            int productId,
-            ILogger log)
+            int productId)
         {
             var result = await productData.DeleteProduct(productId);
 
