@@ -1,4 +1,5 @@
 using Api;
+using Entities.Extensions;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +12,7 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
 
         services.AddSingleton<IProductData, ProductData>();
+        services.AddSeedingServices();
     })
     .Build();
 

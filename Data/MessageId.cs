@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VWH.Domain.Models;
+namespace Data;
 
 /// <summary>
 /// Unique identification of a toll message between all Toll Collectors and Toll charger (Providers).

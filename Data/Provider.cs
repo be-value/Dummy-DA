@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VWH.Domain.Models;
+namespace Data;
 
 public record Provider(ushort Number, string Country)
 {
