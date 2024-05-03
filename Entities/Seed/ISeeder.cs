@@ -3,5 +3,5 @@
 public interface ISeeder
 {
     Task<Azure.Response> ClearAsync();
-    Task SeedAsync();
+    Task SeedAsync(ProviderSeedingInfo providerSeedingInfo);
 }
