@@ -12,7 +12,7 @@ public class DataReset(ISeeder seeder)
         [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "data")] HttpRequest req)
     {
         await seeder.ClearAsync();
-        var providerSeedingInfo = new ProviderSeedingInfo("3-NL", 50000, "ll-ddd-l | NL", "1d2d3d4d5d");
+        var providerSeedingInfo = new ProviderSeedingInfo("3-NL", 300000, "ll-ddd-l | NL", "1d2d3d4d5d6d");
 
         await seeder.SeedAsync(providerSeedingInfo);
         return new OkResult();
