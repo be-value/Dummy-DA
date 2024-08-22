@@ -13,7 +13,7 @@
 /// Specifying characters other than noted above will yield always that character
 /// on the specified position.
 ///
-/// The entries are ordered. i.e. the generatorInfo "x ll y ddd z j" produces the following ordered set:
+/// The entries are ordered. i.e. the generatorInfo "x dd y lll z b" produces the following ordered set:
 /// 
 /// - x 00 y AAA z 0
 /// - x 00 y AAA z 1
@@ -21,8 +21,8 @@
 /// - x 00 y AAB z 0
 /// - x 00 y AAB z 1
 /// - ...
-/// - x 99 y ZZZ z 8
-/// - x 99 y ZZZ z 9
+/// - x 99 y ZZZ z 0
+/// - x 99 y ZZZ z 1
 /// 
 /// </summary>
 /// <returns>The list of generated strings</returns>

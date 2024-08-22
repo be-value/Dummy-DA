@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entities.Seed.SqlServerSeeder">
+    <Position X="2" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Seed\SqlServerSeeder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entities.Seed.TableStorageSeeder">
+    <Position X="5.75" Y="5.25" Width="2.75" />
+    <Members>
+      <Field Name="ConnectionString" Hidden="true" />
+      <Field Name="LicencePlateTableName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAECABAAAAAAA=</HashCode>
+      <FileName>Seed\TableStorageSeeder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entities.Seed.StringGenerator">
+    <Position X="15" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAABA=</HashCode>
+      <FileName>Seed\StringGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Seed.ProviderSeedingInfo">
+    <Position X="10.5" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seed\ProviderSeedingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entities.Seed.ISeeder">
+    <Position X="3.75" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seed\ISeeder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
